@@ -8,7 +8,7 @@ public class intro_recursion {
 	public static void prinT(){
 		if (count == 3) return;
 		count ++;
-		System.out.println("Funtion ran "+ count +" times");
+		System.out.println("Function ran "+ count +" times");
 		prinT();
 		// System.out.println("Closed "+ closedCount++);
 	}

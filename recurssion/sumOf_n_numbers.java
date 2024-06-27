@@ -10,6 +10,7 @@ public class sumOf_n_numbers {
 		sumOfnumbers(i+1, n);
 	}
 
+
 	// Advanced recursion
 	public static void advSumOfNumbers(int i, int advSum){
 		if(i < 1) {
