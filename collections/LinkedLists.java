@@ -22,7 +22,5 @@ public class LinkedLists {
 		System.out.println(qll);
 
 		System.out.println(qll.peek());
-
-
 	}
 }
