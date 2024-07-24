@@ -1,30 +1,32 @@
 package leetcode.medium;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.HashMap;
+import java.util.Map;
 
 public class group_anagram {
-	public static void main(String[] args) {
-		String[] strs = {"eat","tea","tan","ate","nat","bat"};
-		findGroupAnagram(strs);
+	
+	public static List<List<String>> findGroupAnagram(String[] strs){
+		List<List<String>> result = new ArrayList<>();
+		Map<String, List<String>> map = new HashMap<>();
+		for(String tempString: strs){
+			char[] charArray = tempString.toCharArray();
+			Arrays.sort(charArray);
+			String sortedString = new String(charArray);
+			if(map.containsKey(sortedString) == false){
+				map.put(sortedString, new ArrayList<>());
+			}
+			map.get(sortedString).add(tempString);
+		}
+		System.out.println(map);
+		result.addAll(map.values());
+		return result;
 	}
 
-	static boolean findGroupAnagram(String[] strs) {
-		String[] sortedStrs = new String[strs.length];
-		HashMap<String, Integer> Map1 = new HashMap<>();
-		HashMap<String, Integer> Map2 = new HashMap<>();
-
-		for (int a=0; a < strs.length; a++){
-			char[] temp = strs[a].toCharArray();
-			Arrays.sort(temp);
-			sortedStrs[a] = temp.toString();
-		}
-		for (String string : sortedStrs) {
-			System.out.println(string);
-		}
-		
-
-		
-		return true;
+	public static void main(String[] args) {
+		String[] strs = {"eat","tea","tan","ate","nat","bat"};
+		System.out.println(findGroupAnagram(strs));
 	}
 }
