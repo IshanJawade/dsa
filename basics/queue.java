@@ -51,6 +51,7 @@ public class queue {
 		q.enqueue(9); 
 		q.enqueue(10);
 		q.enqueue(11);
+		q.showqueue(); 
 		q.dequeue();
 		q.dequeue();
 		q.dequeue();
