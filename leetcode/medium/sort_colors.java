@@ -1,4 +1,6 @@
-public class test{
+package leetcode.medium;
+
+public class sort_colors {
 
 	static void sortColors(int arr[]){
 		int n = arr.length;
@@ -35,5 +37,4 @@ public class test{
 		}
 		System.out.println("\n");
 	}
-
 }
