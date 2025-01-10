@@ -1,3 +1,7 @@
 {
-	"editor.fontSize": 16
+	"editor.fontSize": 16,
+	"files.associations": {
+		"*.c": "c",
+		"strings.h": "c"
+	}
 }

@@ -2,7 +2,24 @@ package leetcode.easy;
 
 public class move_zeros {
 
-	static void moveZeros(int nums[]){
+	// Optimized
+	static void moveZeroesOpt(int[] nums) {
+        int flag = 0;
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] != 0){
+                swap(nums, flag, i);
+                flag++;
+            } 
+        }
+    }
+    static void swap(int[] nums, int flag, int i){
+        int temp = nums[i];
+        nums[i] = nums[flag];
+        nums[flag] = temp;
+    }
+
+	// very complex
+	static void moveZeroes(int nums[]){
 		if(nums.length == 1){
 			return;
 		}
@@ -24,7 +41,7 @@ public class move_zeros {
 	}
 	public static void main(String[] args) {
 		int nums[] = {0,1,0,3,12};
-		moveZeros(nums);
+		moveZeroesOpt(nums);
 		for (int i : nums) {
 			System.out.print(i +" ");
 		}
