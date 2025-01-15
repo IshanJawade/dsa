@@ -1,29 +1,13 @@
 package leetcode.medium;
 
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 
 public class word_subset {
 	static List<String> wordSubsets(String[] words1, String[] words2) {
-		List<String> subset = new ArrayList<>();
-		int flag = 0;
-		for(int j=0; j<words2.length; j++){
-			char[] ch = words2[j].toCharArray();
-			for(int i=0; i<ch.length; i++){
-				String temp = "" + ch[i];
-				flag = 0;
-				for(int k=0; k<words1.length; k++){
-					if(words1[k].contains(temp)){
-						flag++;
-					}
-					if(flag == ch.length){
-						subset.add(words1[k]);
-					}
-				}
-			}
+		Map<Character,Integer> w2 = new HashMap<>();
+		for (String str : words2) {
+			
 		}
-		return subset;
 	}
 	public static void main(String[] args) {
 		List<String> subset = new ArrayList<>();
