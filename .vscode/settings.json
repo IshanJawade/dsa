@@ -3,5 +3,6 @@
 	"files.associations": {
 		"*.c": "c",
 		"strings.h": "c"
-	}
+	},
+	"java.debug.settings.onBuildFailureProceed": true
 }
