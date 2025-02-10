@@ -7,7 +7,6 @@ public class count_anagrams {
         Map<Character, Integer> map = new HashMap<>();
         char[] strArr = s.toCharArray();
         char[] kArr = k.toCharArray();
-        int count = 0;
 
         //create hashMap to save character and its count
         for(char c: kArr){
@@ -16,7 +15,7 @@ public class count_anagrams {
             // if its there then it will just increace the value by 1 
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
-        int uniqueChars = map.size();
+        int count = map.size();
 
         // create window
         int i=0, j=0;
@@ -24,12 +23,16 @@ public class count_anagrams {
             char currentChar = strArr[j];
             if(map.containsKey(strArr[j])){
                 map.put(currentChar, map.get(currentChar)-1);
+                if(map.get(currentChar)== 0){
+                    count --;
+                }
             }
+
         }
 
         // slide the windows through the array
-        while(j< strArr.length){
-            
+        while(j < strArr.length){
+            if(map.)
         }
 
 
