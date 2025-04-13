@@ -15,9 +15,9 @@ public class subsequence {
 		// Take or pick the perticular index
 		list.add(nums[ind]);
 		giveSubSquence(ind+1, list, nums, n);
-		list.removeLast();
-
+		
 		// Not pick or not take perticular index
+		list.removeLast();
 		giveSubSquence(ind+1, list, nums, n);
 	}
 	public static void main(String[] args) {
