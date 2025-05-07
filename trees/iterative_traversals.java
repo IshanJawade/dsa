@@ -22,6 +22,9 @@ public class iterative_traversals {
     public List<Integer> preOrder(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
+
+        if(root == null) return list;
+
         stack.push(root);
 
         while(!stack.empty()) {
@@ -32,6 +35,53 @@ public class iterative_traversals {
         }
         return list;
     }
+
+    // Iterative In Order 
+    public List<Integer> inOrder(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        if(root == null) return list;
+
+        TreeNode node = root;
+        while(true) {
+            if(node != null) { 
+                stack.push(node);
+                node = node.left;
+            } else {
+                if(stack.isEmpty()) break;
+
+                node = stack.pop();
+                list.add(node.val);
+                node = node.right;
+            }
+        }
+        return list;
+    }
+
+    // Interative Post order (using 2 stacks)
+    public List<Integer> postOrder(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack1 = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
+
+        if(root == null) return list;
+
+        stack1.push(root);
+
+        while(!stack1.isEmpty()) {
+            root = stack1.pop();
+            stack2.push(root);
+            if(root.left != null) stack1.push(root.left));
+            if(root.right != null) stack1.push(root.right));
+        }
+        while(!stack2.isEmpty()) {
+            list.add(stack2.pop().val);
+        }
+        return list;
+    }
+
+    
 
     public static void main(String[] args) {
         
