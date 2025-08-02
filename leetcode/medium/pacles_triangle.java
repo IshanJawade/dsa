@@ -1,7 +1,9 @@
-import java.util.*;
+package leetcode.medium;
 
-public class test{
+import java.util.ArrayList;
+import java.util.List;
 
+public class pacles_triangle {
 	private static List<List<Integer>> Generate(int n) {
 		List<List<Integer>> res = new ArrayList<>();
 
@@ -29,6 +31,4 @@ public class test{
 		int n = 5;
 		System.out.println(Generate(n));
 	}
-
-
 }
