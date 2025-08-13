@@ -2,6 +2,13 @@ package leetcode.easy;
 
 public class power_of_3 {
 
+	// without loop and recursion
+	public static boolean isPowerOfThreeOp(int n) {
+
+		// after 3^19 number excides int limit
+		return n > 0 && Math.pow(3, 19)%n == 0;
+	}
+
 	// with loop
 	public static boolean isPowerOfThree(int n) {
         if(n <= 0) return false;
