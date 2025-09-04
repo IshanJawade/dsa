@@ -1,7 +1,6 @@
+package leetcode.medium;
 import java.util.*;
-
-public class test{
-
+public class koko_eating_bananas {
 	public static int minEatingSpeed(int[] piles, int h) {
          // check if the array is not empty
 		if(piles.length == 0) return 0;
@@ -34,6 +33,4 @@ public class test{
 		int h = 8;
 		System.out.println(minEatingSpeed(piles, h));
 	}
-
-
 }
