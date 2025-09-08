@@ -44,14 +44,14 @@ public class undirected_cycle_detection {
 
     // Detect cycle by BFS
     static boolean isCycleBFS(List<List<Integer>> adj, boolean[] visited, int u){
-        Deque<int[]> qu = new ArrayDeque<>();
+        Queue<int[]> qu = new ArrayDeque<>();
 
         // adding first element in que
-        qu.add(new int[]{u, -1});
+        qu.offer(new int[]{u, -1});
         visited[u] = true;
 
         while(!qu.isEmpty()){
-            // takeout hea of the queue in pair
+            // takeout head of the queue in pair
             int[] pair = qu.poll();
 
             int source = pair[0];
@@ -60,7 +60,7 @@ public class undirected_cycle_detection {
             for(int v: adj.get(source)){
                 if(visited[v] == false){
                     visited[v] = true;
-                    qu.add(new int[]{v, source});
+                    qu.offer(new int[]{v, source});
                 } else if(v != parent){
                     return true;
                 }
@@ -91,7 +91,7 @@ public class undirected_cycle_detection {
                 return true;
             }
         }
-        
+
         return false;
     }
 
