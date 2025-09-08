@@ -74,14 +74,14 @@ public class dfs_bfs {
         boolean[] visitedBfs = new boolean[V];
 
         List<List<Integer>> adj = createAdjMatrix(V, edges);
-        System.err.println(adj);
+        System.err.println("Adj List: "+adj);
 
         List<Integer> dfs = new ArrayList<>();
         DFS(adj, 0, visitedDfs, dfs);
-        System.err.println(dfs);
+        System.err.println("DFS: "+dfs);
 
         List<Integer> bfs = new ArrayList<>();
         BFS(adj, 0, visitedBfs, bfs);
-        System.err.println(bfs);
+        System.err.println("BFS: "+bfs);
     }
 }

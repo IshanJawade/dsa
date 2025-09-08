@@ -1,11 +1,10 @@
 package graphs;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class undirected_cycle_detection {
 
-    // Create an adjecency matrix
+    // Create an adjecency List
     static List<List<Integer>> createAdjMatrix(int V, int[][] edges){
         List<List<Integer>> adj = new ArrayList<>();
 
@@ -26,7 +25,7 @@ public class undirected_cycle_detection {
     }
 
     // Detect cycle by DFS
-    static boolean isCycleDfs(List<List<Integer>> adj, boolean[] visited, int u, int parent){
+    static boolean isCycleDFS(List<List<Integer>> adj, boolean[] visited, int u, int parent){
         visited[u] = true;
         
         for(int v: adj.get(u)){
@@ -36,24 +35,63 @@ public class undirected_cycle_detection {
             // if current node is already visited then cycle exist
             if(visited[v]) 
                 return true;
-            // if cycle found in next node return ture
-            if(isCycleDfs(adj, visited, v, u))
+            // if cycle found in next node return true
+            if(isCycleDFS(adj, visited, v, u))
                 return true;
         }
         return false;
     }
 
+    // Detect cycle by BFS
+    static boolean isCycleBFS(List<List<Integer>> adj, boolean[] visited, int u){
+        Deque<int[]> qu = new ArrayDeque<>();
+
+        // adding first element in que
+        qu.add(new int[]{u, -1});
+        visited[u] = true;
+
+        while(!qu.isEmpty()){
+            // takeout hea of the queue in pair
+            int[] pair = qu.poll();
+
+            int source = pair[0];
+            int parent = pair[1];
+
+            for(int v: adj.get(source)){
+                if(visited[v] == false){
+                    visited[v] = true;
+                    qu.add(new int[]{v, source});
+                } else if(v != parent){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /*
+    Comment the code which you dint want to run
+     */
     static boolean isCycle(List<List<Integer>> adj, int V){
 
-        // visoted array to keep track of visited nodes
+        // DFS
         boolean[] visited = new boolean[V];
-
-        // traverse throug all the nodes to check for cycles
         for(int i=0; i<V ;i++){
-            if(!visited[i] && isCycleDfs(adj, visited, 0, -1)){
+            if(!visited[i] && isCycleDFS(adj, visited, 0, -1)){
+                System.err.println("DFS: True!");
                 return true;
             }
         }
+
+        // BFS
+        boolean[] visited2 = new boolean[V];
+        for(int i=0; i<V ;i++){
+            if(!visited2[i] && isCycleBFS(adj, visited2, 0)){
+                System.err.println("BFS: True!");
+                return true;
+            }
+        }
+        
         return false;
     }
 
