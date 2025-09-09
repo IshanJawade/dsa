@@ -54,6 +54,52 @@ public class cycle_detection_in_directed_graph {
         return false;
     }   
 
+    // BFS Cycle Detction by using" Kahn's Algorithm "
+    static boolean kahansAlgorithm(List<List<Integer>> adj, int V){
+
+        // filling up in degreearray (How many arrays are comming towards the node)
+        int[] indeg = new int[V];
+        for(int i=0; i<V; i++){
+            for(int v: adj.get(i)){
+                indeg[v] ++;
+            }
+        }
+
+        int count = 0;
+
+        // filling up the queue with nodes with zero indegree
+        Queue<Integer> q = new ArrayDeque<>();
+        for(int i=0; i<V; i++){
+            if(indeg[i] == 0){
+                q.offer(i);
+                count++;
+            }
+        }
+
+        
+        List<Integer> result = new ArrayList<>();
+        // run the while loop util queue gets empty
+        while(!q.isEmpty()){
+            int u = q.poll();
+            result.add(u);
+
+            for(int v: adj.get(u)){
+                indeg[v] --;
+                if(indeg[v] == 0){
+                    q.offer(v);
+                    count++;
+                }
+            }
+        }
+
+        // If number of pushed in queue is equal to number of nodes
+        if(count == V){
+            return false;   // no cycles
+        } 
+
+        return true;
+    }   
+
     public static void main(String[] args) {
         // number of vertices
         int V = 5;  
@@ -64,6 +110,10 @@ public class cycle_detection_in_directed_graph {
         };        
 
         List<List<Integer>> adj = createAdjMatrix(V, edges);
-        System.out.println(isCycle(adj, V));
+        // Calling DFS Method
+        System.out.println("Cycle Dtetction DFS: "+ isCycle(adj, V));
+        // Calling BFS Method
+        System.out.println("Cycle Dtetction BFS: "+ kahansAlgorithm(adj, V));
+
     }
 }
