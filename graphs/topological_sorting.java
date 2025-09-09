@@ -1,9 +1,6 @@
 package graphs;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 public class topological_sorting {
 
@@ -39,6 +36,40 @@ public class topological_sorting {
         // push u at the end 
         st.push(u);
     }
+    // BFS also Know as " Kahn's Algorithm "
+    static List<Integer> kahansAlgorithm(List<List<Integer>> adj, int V){
+
+        // filling up in degreearray (How many arrays are comming towards the node)
+        int[] indeg = new int[V];
+        for(int i=0; i<V; i++){
+            for(int v: adj.get(i)){
+                indeg[v] ++;
+            }
+        }
+
+        // filling up the queue with nodes with zero indegree
+        Queue<Integer> q = new ArrayDeque<>();
+        for(int i=0; i<V; i++){
+            if(indeg[i] == 0){
+                q.offer(i);
+            }
+        }
+
+        List<Integer> result = new ArrayList<>();
+        // run the while loop util queue gets empty
+        while(!q.isEmpty()){
+            int u = q.poll();
+            result.add(u);
+
+            for(int v: adj.get(u)){
+                indeg[v] --;
+                if(indeg[v] == 0){
+                    q.offer(v);
+                }
+            }
+        }
+        return result;
+    }   
 
     public static void main(String[] args) {
         // number of vertices
@@ -65,6 +96,10 @@ public class topological_sorting {
             printing like a normal ArrayList or Queue. No need to put elements from
             stack into another queue or arraylist. Also, can be used as a stak. (push/pop)
         */
-        System.out.println(stack);
+        System.out.println("DFS Method: "+stack);
+
+        // Calling Kahans Algorithm
+        List<Integer> topologyBFS = kahansAlgorithm(adj, V);
+        System.out.println("Kahan's Algorithm (BFS): " + topologyBFS);
     }
 }
