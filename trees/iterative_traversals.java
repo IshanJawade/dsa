@@ -72,8 +72,8 @@ public class iterative_traversals {
         while(!stack1.isEmpty()) {
             root = stack1.pop();
             stack2.push(root);
-            if(root.left != null) stack1.push(root.left));
-            if(root.right != null) stack1.push(root.right));
+            if(root.left != null) stack1.push(root.left);
+            if(root.right != null) stack1.push(root.right);
         }
         while(!stack2.isEmpty()) {
             list.add(stack2.pop().val);

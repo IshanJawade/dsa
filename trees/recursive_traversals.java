@@ -1,6 +1,6 @@
 package trees;
 
-import java.util.*;
+// import java.util.*;
 
 class TreeNode {
     int val;
@@ -15,35 +15,34 @@ class TreeNode {
 
 }
 
-// inorder traversal
-public void inorder(TreeNode root) {
-    if(root == null) return;
+public class recursive_traversals {
+        // inorder traversal
+    public void inorder(TreeNode root) {
+        if(root == null) return;
 
-    inorder(root.left);
-    System.out.println(root.val);
-    inorder(root.right);
-} 
+        inorder(root.left);
+        System.out.println(root.val);
+        inorder(root.right);
+    } 
 
-// pre-order traversal
-public void preorder(TreeNode root) {
-    if(root == null) return;
-    
-    System.out.println(root.val);
-    preorder(root.left);
-    preorder(root.right);
-}   
+    // pre-order traversal
+    public void preorder(TreeNode root) {
+        if(root == null) return;
+        
+        System.out.println(root.val);
+        preorder(root.left);
+        preorder(root.right);
+    }   
 
-// post-order traversal
-public void postorder(TreeNode root) {
-    if(root == null) return;
+    // post-order traversal
+    public void postorder(TreeNode root) {
+        if(root == null) return;
 
-    postorder(root.left);
-    postorder(root.right);
-    System.out.println(root.val);
-}   
+        postorder(root.left);
+        postorder(root.right);
+        System.out.println(root.val);
+    }   
 
-
-public class traversals {
     public static void main(String[] args) {
 
     }

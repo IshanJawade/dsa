@@ -31,9 +31,7 @@ public class count_anagrams {
         }
 
         // slide the windows through the array
-        while(j < strArr.length){
-            if(map.)
-        }
+       
 
 
         return 0;

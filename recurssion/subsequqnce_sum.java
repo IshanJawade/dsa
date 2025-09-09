@@ -15,11 +15,11 @@ public class subsequqnce_sum {
 		}
 		// take
 		list.add(nums[ind]);
-		findSequenceSum(ind+1, nums, n, list, sum + nums[ind]), s);
+		findSequenceSum(ind+1, nums, n, list, sum + nums[ind], s);
 
 		// not take
 		list.removeLast();
-		findSequenceSum(ind+1, nums, n, list, sum + nums[ind]), s);
+		findSequenceSum(ind+1, nums, n, list, sum + nums[ind], s);
 	}
 	public static void main(String[] args) {
 		int[] nums = {1,2,1};
