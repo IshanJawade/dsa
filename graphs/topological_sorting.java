@@ -29,7 +29,7 @@ public class topological_sorting {
     // DFS Topology recursive algorithm
     static void topologicalSort( List<List<Integer>> adj, boolean[] visited, Deque<Integer> st, int u){
         visited[u] = true;
-        
+
         // first push all the V's in the stack
         for(int v : adj.get(u)){
             if(visited[v] == false){
@@ -59,6 +59,12 @@ public class topological_sorting {
             }
         }
 
+        /*
+            Advantages of Deque:  can be use as a stack, queue 
+            Hence, we can print stack which is Deque. While printing it's 
+            printing like a normal ArrayList or Queue. No need to put elements from
+            stack into another queue or arraylist. Also, can be used as a stak. (push/pop)
+        */
         System.out.println(stack);
     }
 }
