@@ -2,7 +2,7 @@ package graphs;
 
 import java.util.*;
 
-public class undirected_cycle_detection {
+public class cycle_detection_in_undirected_graph {
 
     // Create an adjecency List
     static List<List<Integer>> createAdjMatrix(int V, int[][] edges){
@@ -106,7 +106,6 @@ public class undirected_cycle_detection {
 
         List<List<Integer>> adj = createAdjMatrix(V, edges);
 
-        System.err.println(isCycle(adj, V));
-        
+        System.out.println(isCycle(adj, V));   
     }
 }
