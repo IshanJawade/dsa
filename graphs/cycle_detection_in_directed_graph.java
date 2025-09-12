@@ -30,10 +30,12 @@ public class cycle_detection_in_directed_graph {
         inRec[u] = true;
 
         for(int v: adj.get(u)){
+            // in below line && just represents another if() statement 
             if(visited[v] == false && isCycleDFS(adj, visited, inRec, v)){
                 return true;
             }  
-            else if(inRec[v] == true){
+            // visited = true && inRec = true
+            else if(inRec[v] == true){ 
                 return true;
             }
         }

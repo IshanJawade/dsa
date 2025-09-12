@@ -23,6 +23,7 @@ public class topological_sorting {
         }
         return adj;
     }
+
     // DFS Topology recursive algorithm
     static void topologicalSort( List<List<Integer>> adj, boolean[] visited, Deque<Integer> st, int u){
         visited[u] = true;
@@ -36,10 +37,11 @@ public class topological_sorting {
         // push u at the end 
         st.push(u);
     }
+
     // BFS also Know as " Kahn's Algorithm "
     static List<Integer> kahansAlgorithm(List<List<Integer>> adj, int V){
 
-        // filling up in degreearray (How many arrays are comming towards the node)
+        // filling up in degreearray (How many arrows are comming towards the node)
         int[] indeg = new int[V];
         for(int i=0; i<V; i++){
             for(int v: adj.get(i)){
@@ -83,6 +85,7 @@ public class topological_sorting {
         List<List<Integer>> adj = createAdjMatrix(V, edges);
         boolean[] visited = new boolean[V];
         Deque<Integer> stack = new ArrayDeque<>();
+        
         // traverse through the graph
         for(int i=0; i<V; i++){
             if(visited[i] == false){
