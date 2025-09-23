@@ -19,7 +19,8 @@ public class cycle_detection_in_undirected_graph {
             int v = e[1];   // destination
 
             // take u'th arraylist from adj add (int) v in it
-            adj.get(u).add(v); 
+            adj.get(u).add(v);
+            adj.get(v).add(u);  // reverse pair for undirected graph
         }
         return adj;
     }
