@@ -1,13 +1,10 @@
 package lldDesignPatterns.ObserverDP.ObservableServer;
 
+import lldDesignPatterns.ObserverDP.Observers.Observer;
+
 public interface Observable {
-    
-    public void add(Observable obj);
-    public void remove(Observable obj);
-    public void setData(int data);
+    public void add(Observer obj);
+    public void remove(Observer obj);
     public void notifyObservers();
+    public void setData(int data);
 }
-
-
-
-

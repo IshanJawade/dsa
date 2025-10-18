@@ -11,7 +11,7 @@ public class SMSObserver implements Observer{
     }
 
     public void update(){
-        System.out.println("SMS notification received from change");
+        System.out.println("SMS notification received from change.");
     }
     
 }
