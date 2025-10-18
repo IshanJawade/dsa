@@ -1,7 +1,7 @@
-package lldDesignPatterns.strategyDP;
+package lldDesignPatterns.StrategyDP;
 
-import lldDesignPatterns.strategyDP.Vehicle.Vehicle;
-import lldDesignPatterns.strategyDP.Vehicle.strategies.SportDS;
+import lldDesignPatterns.StrategyDP.Vehicle.Vehicle;
+import lldDesignPatterns.StrategyDP.Vehicle.strategies.SportDS;
 
 public class suv extends Vehicle{
 

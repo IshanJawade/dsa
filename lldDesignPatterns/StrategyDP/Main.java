@@ -1,6 +1,6 @@
-package lldDesignPatterns.strategyDP;
+package lldDesignPatterns.StrategyDP;
 
-import lldDesignPatterns.strategyDP.Vehicle.Vehicle;
+import lldDesignPatterns.StrategyDP.Vehicle.Vehicle;
 
 public class Main {
     public static void main(String[] args) {

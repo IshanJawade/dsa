@@ -1,7 +1,7 @@
-package lldDesignPatterns.strategyDP;
+package lldDesignPatterns.StrategyDP;
 
-import lldDesignPatterns.strategyDP.Vehicle.Vehicle;
-import lldDesignPatterns.strategyDP.Vehicle.strategies.LuxuryDS;
+import lldDesignPatterns.StrategyDP.Vehicle.Vehicle;
+import lldDesignPatterns.StrategyDP.Vehicle.strategies.LuxuryDS;
 
 public class sedan extends Vehicle{
     
@@ -9,6 +9,7 @@ public class sedan extends Vehicle{
         super(new LuxuryDS());
     }
     
+    @Override
     public void drive(){
         System.out.println("This is a Sedan.");
         super.drive();

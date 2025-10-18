@@ -1,4 +1,4 @@
-package lldDesignPatterns.strategyDP.Vehicle.strategies;
+package lldDesignPatterns.StrategyDP.Vehicle.strategies;
 
 public class LuxuryDS implements DriveStrategy{
 
