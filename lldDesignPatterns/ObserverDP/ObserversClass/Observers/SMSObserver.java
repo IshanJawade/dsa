@@ -1,6 +1,7 @@
-package lldDesignPatterns.ObserverDP.Observers;
+package lldDesignPatterns.ObserverDP.ObserversClass.Observers;
 
 import lldDesignPatterns.ObserverDP.ObservableServer.Observable;
+import lldDesignPatterns.ObserverDP.ObserversClass.Observer;
 
 public class SMSObserver implements Observer{
     

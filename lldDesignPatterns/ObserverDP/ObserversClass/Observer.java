@@ -1,4 +1,4 @@
-package lldDesignPatterns.ObserverDP.Observers;
+package lldDesignPatterns.ObserverDP.ObserversClass;
 
 public interface Observer {
     public void update();

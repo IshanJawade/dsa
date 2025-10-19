@@ -1,9 +1,9 @@
 package lldDesignPatterns.ObserverDP.ObservableServer;
 
-import lldDesignPatterns.ObserverDP.Observers.Observer;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import lldDesignPatterns.ObserverDP.ObserversClass.Observer;
 
 public class ObservableServer implements Observable{
 

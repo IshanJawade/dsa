@@ -1,6 +1,9 @@
 package lldDesignPatterns.StrategyDP;
 
-import lldDesignPatterns.StrategyDP.Vehicle.Vehicle;
+import lldDesignPatterns.StrategyDP.VehicleClass.Vehicle;
+import lldDesignPatterns.StrategyDP.VehicleClass.VehicleTypes.hatchback;
+import lldDesignPatterns.StrategyDP.VehicleClass.VehicleTypes.sedan;
+import lldDesignPatterns.StrategyDP.VehicleClass.VehicleTypes.suv;
 
 public class Main {
     public static void main(String[] args) {

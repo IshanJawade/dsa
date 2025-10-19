@@ -2,8 +2,8 @@ package lldDesignPatterns.ObserverDP;
 
 import lldDesignPatterns.ObserverDP.ObservableServer.Observable;
 import lldDesignPatterns.ObserverDP.ObservableServer.ObservableServer;
-import lldDesignPatterns.ObserverDP.Observers.EmailObserver;
-import lldDesignPatterns.ObserverDP.Observers.SMSObserver;
+import lldDesignPatterns.ObserverDP.ObserversClass.Observers.EmailObserver;
+import lldDesignPatterns.ObserverDP.ObserversClass.Observers.SMSObserver;
 
 
 public class Main {

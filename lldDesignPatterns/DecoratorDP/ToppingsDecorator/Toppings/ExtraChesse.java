@@ -1,6 +1,7 @@
-package lldDesignPatterns.DecoratorDP.Toppings;
+package lldDesignPatterns.DecoratorDP.ToppingsDecorator.Toppings;
 
-import lldDesignPatterns.DecoratorDP.Pizza.BasePizza;
+import lldDesignPatterns.DecoratorDP.BasePizza.BasePizza;
+import lldDesignPatterns.DecoratorDP.ToppingsDecorator.ToppingDecorator;
 
 public class ExtraChesse extends ToppingDecorator {
 

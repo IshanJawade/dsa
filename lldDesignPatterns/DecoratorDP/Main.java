@@ -1,11 +1,11 @@
 package lldDesignPatterns.DecoratorDP;
 
-import lldDesignPatterns.DecoratorDP.Pizza.BasePizza;
-import lldDesignPatterns.DecoratorDP.Pizza.Margherita;
-import lldDesignPatterns.DecoratorDP.Pizza.Peperoni;
-import lldDesignPatterns.DecoratorDP.Toppings.ExtraChesse;
-import lldDesignPatterns.DecoratorDP.Toppings.RoastedChicken;
-import lldDesignPatterns.DecoratorDP.Toppings.VeggiCombo;
+import lldDesignPatterns.DecoratorDP.BasePizza.BasePizza;
+import lldDesignPatterns.DecoratorDP.BasePizza.Pizzas.Margherita;
+import lldDesignPatterns.DecoratorDP.BasePizza.Pizzas.Peperoni;
+import lldDesignPatterns.DecoratorDP.ToppingsDecorator.Toppings.ExtraChesse;
+import lldDesignPatterns.DecoratorDP.ToppingsDecorator.Toppings.RoastedChicken;
+import lldDesignPatterns.DecoratorDP.ToppingsDecorator.Toppings.VeggiCombo;
 
 public class Main {
     public static void main(String[] args) {

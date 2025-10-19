@@ -1,7 +1,7 @@
-package lldDesignPatterns.StrategyDP;
+package lldDesignPatterns.StrategyDP.VehicleClass.VehicleTypes;
 
-import lldDesignPatterns.StrategyDP.Vehicle.Vehicle;
-import lldDesignPatterns.StrategyDP.Vehicle.strategies.LuxuryDS;
+import lldDesignPatterns.StrategyDP.VehicleClass.Vehicle;
+import lldDesignPatterns.StrategyDP.VehicleClass.DriveStrategy.Strategies.LuxuryDS;
 
 public class sedan extends Vehicle{
     

@@ -1,6 +1,6 @@
 package lldDesignPatterns.ObserverDP.ObservableServer;
 
-import lldDesignPatterns.ObserverDP.Observers.Observer;
+import lldDesignPatterns.ObserverDP.ObserversClass.Observer;
 
 public interface Observable {
     public void add(Observer obj);

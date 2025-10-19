@@ -1,4 +1,6 @@
-package lldDesignPatterns.StrategyDP.Vehicle.strategies;
+package lldDesignPatterns.StrategyDP.VehicleClass.DriveStrategy.Strategies;
+
+import lldDesignPatterns.StrategyDP.VehicleClass.DriveStrategy.DriveStrategy;
 
 public class RegularDS implements DriveStrategy{
 
