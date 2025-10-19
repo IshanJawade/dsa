@@ -1,6 +1,7 @@
 package lldDesignPatterns.FactoryDP;
 
-import lldDesignPatterns.FactoryDP.Shapes.Shape;
+import lldDesignPatterns.FactoryDP.ShapeFactory.ShapeFactory;
+import lldDesignPatterns.FactoryDP.ShapeFactory.Shapes.Shape;
 
 public class Main {
     public static void main(String[] args) {

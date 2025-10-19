@@ -1,4 +1,4 @@
-package lldDesignPatterns.FactoryDP.Shapes;
+package lldDesignPatterns.FactoryDP.ShapeFactory.Shapes;
 
 public class Square implements Shape{
 

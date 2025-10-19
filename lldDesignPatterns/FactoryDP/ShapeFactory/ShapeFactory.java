@@ -1,9 +1,9 @@
-package lldDesignPatterns.FactoryDP;
+package lldDesignPatterns.FactoryDP.ShapeFactory;
 
-import lldDesignPatterns.FactoryDP.Shapes.Circle;
-import lldDesignPatterns.FactoryDP.Shapes.Shape;
-import lldDesignPatterns.FactoryDP.Shapes.Square;
-import lldDesignPatterns.FactoryDP.Shapes.Triangle;
+import lldDesignPatterns.FactoryDP.ShapeFactory.Shapes.Circle;
+import lldDesignPatterns.FactoryDP.ShapeFactory.Shapes.Shape;
+import lldDesignPatterns.FactoryDP.ShapeFactory.Shapes.Square;
+import lldDesignPatterns.FactoryDP.ShapeFactory.Shapes.Triangle;
 
 public class ShapeFactory {
     
